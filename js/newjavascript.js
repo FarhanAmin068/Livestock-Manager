@@ -220,9 +220,9 @@ function addItem(){
             cartCont.appendChild(tempCart)
             
         })
-        document.getElementById('total-amount').innerHTML = 'Total Amount : $ ' + totalAmount;
+        document.getElementById('total-amount').innerHTML = 'Total Amount :  tk' + totalAmount;
         document.getElementById('total-items').innerHTML = 'Total Items : ' + totalItems;
-        document.getElementById('you-saved').innerHTML = 'You Saved : $ ' + totalSaving;
+        document.getElementById('you-saved').innerHTML = 'You Saved : tk ' + totalSaving;
         document.getElementById('total').style.display= "block";
 }
 
