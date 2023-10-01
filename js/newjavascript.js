@@ -56,7 +56,7 @@ const data= [
     {
         id : 6,
         img : 'images/egg.jpg',
-        name : 'Redmi 8A Dual',
+        name : 'Egg',
         price : 140,
         save : 10,
         delievery : 'In 3 - 4 days',
@@ -87,20 +87,18 @@ back.addEventListener('click',refreshPage)
 var addToCarts = document.querySelectorAll('#add-to-cart')
 var cart = document.getElementById('cart');
 
-// click event to display cart page
+
 cart.addEventListener('click',displayCart)
 
 var carts = document.getElementById('carts');
 
-//click events to add items to cart from details page
 carts.addEventListener('click',()=>addToCart(getId))
 
 var home = document.getElementById('logo');
 
-//click event to hide cart page and return to home page
 home.addEventListener('click',hideCart);
 
-//events on dynamically created element to remove items from list
+
 document.addEventListener('click',function (e){
     if(e.target.id=='remove'){
         var itemId = e.target.parentNode.id
