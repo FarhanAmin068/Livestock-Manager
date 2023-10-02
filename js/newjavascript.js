@@ -123,8 +123,8 @@ function handleDetail(e){
     getId= this.parentNode.id;
     detailsImg.src= data[getId].img;
     detailTitle.innerHTML=   data[getId].name;
-    detailPrice.innerHTML= 'Price : $ ' +data[getId].price;
-    youSave.innerHTML= 'You save : ($ ' + data[getId].save + ')';
+    detailPrice.innerHTML= 'Price : tk ' +data[getId].price;
+    youSave.innerHTML= 'You save : (tk ' + data[getId].save + ')';
 }
 
 // add item to the cart

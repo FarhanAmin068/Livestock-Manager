@@ -369,7 +369,10 @@ footer{
     border: none;
 }
 #carts{
-    background: rgb(238, 166, 12);
+    background:  green;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
     color: white;
 }
 #carts:active{
@@ -377,7 +380,10 @@ footer{
     color: rgb(238, 166, 12);
 }
 #buy{
-    background: rgb(167, 179, 5);
+    background:  green;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
     color: white;
 }
 #buy:active{
