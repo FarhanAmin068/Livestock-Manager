@@ -225,6 +225,9 @@ function addItem(){
         document.getElementById('you-saved').innerHTML = 'You Saved : tk ' + totalSaving;
         document.getElementById('total').style.display= "block";
 }
+document.getElementById('go-back').addEventListener('click', function() {
+    window.location.href = 'index2.html'; // Replace 'index2.html' with the appropriate URL
+});
 
 //remove item from the cart
 function removeFromCart(itemId){
@@ -236,4 +239,24 @@ function removeFromCart(itemId){
         document.getElementById('empty-cart').style.display= "block";
     }
 }
+var confirmOrderButton = document.getElementById('confirm-order');
+
+// Add a click event listener to the "Confirm Order" button
+confirmOrderButton.addEventListener('click', function () {
+    // Check if the cart is not empty
+    if (cartList.length > 0) {
+        // Redirect to the checkout HTML page
+        window.location.href = 'checkout.html'; // Replace 'checkout.html' with the actual URL of your checkout page
+    } else {
+        // Display a message if the cart is empty
+        alert('Your cart is empty. Add items to your cart before confirming the order.');
+    }
+});
+const goBackEmptyButton = document.getElementById('go-back-empty');
+
+
+goBackEmptyButton.addEventListener('click', function () {
+    // Use window.location to navigate to the main page (index2.html in this case)
+    window.location.href = 'index2.html'; // Update the URL to the correct page
+});
 

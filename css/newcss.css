@@ -213,7 +213,7 @@ nav {
 }
 #item-name{
     text-align: left;
-    color: lightseagreen;
+    color:black;
     margin-top: 1rem;
     font-size: 0.95rem;
 }
@@ -233,7 +233,7 @@ nav {
     opacity: 1;
 }
 #item-price{
-    color: rgb(199, 110, 110);
+    color: green;
     text-align: left;
     margin-top: 0.5rem;
 }
@@ -333,18 +333,18 @@ footer{
 
 #detail-title{
     margin-top: 1rem;
-    color: teal;
+    color: black;
     font-size: 2.5rem;
 }
 #detail-price{
     margin-top: 1.5rem;
-    color: rgb(199, 110, 110);
+    color: green;
     font-size: 1.5rem;
 }
 #you-save{
     font-size: 1.2rem;
     
-    color: rgb(106, 146, 161);
+    color:lightgreen;
 }
 #delievery{
     margin-top: 1.5rem;
@@ -435,21 +435,104 @@ footer{
     width: 5rem;
     height: 5rem;
 }
-#total{
-    display: none;
-    position: relative;
-    margin-top: 3rem;
-    right: 1rem;
-    float: right;background: rgb(172, 191, 246);
+
+
+
+#total {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: lightgray;
     font-family: monospace;
     font-size: larger;
     padding: 1rem;
-    color: rgb(149, 51, 34);
+    color: green;
     letter-spacing: 0.1rem;
     margin-bottom: 1.5rem;
+    margin-top: 30px;
 }
-#you-saved{
+
+#confirm-order, #go-back {
+    display: inline-block;
+    margin: 1rem;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#confirm-order {
+    background: green;
+}
+
+#go-back {
+    background:green;
+}
+
+#confirm-order:hover{
+    background: white;
+    color: darkgreen;
+}
+
+#go-back:hover {
+    background: white;
+    color: darkgreen;
+}
+#go-back-empty {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#go-back-empty:hover {
+    background-color: darkgreen;
+}
+
+.total-info {
+    display: inline-block;
+    text-align: center;
+}
+
+#you-saved {
     color: rgb(101, 99, 102);
+}
+#cart-container{
+    display: none;
+    margin-top: 5rem;
+}
+#total{
+    display: none;
+    position: relative;
+    margin-top: 5rem;
+    float: middle;
+    font-family: monospace;
+    font-size: larger;
+    padding: 1rem;
+    color: green;
+    letter-spacing: 0.1rem;
+    margin-bottom: 1.5rem;
+
+}
+#empty-cart button#go-back-empty {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#empty-cart button#go-back-empty:hover {
+    background-color: darkgreen;
 }
 
 /* media queries for responsive view */
