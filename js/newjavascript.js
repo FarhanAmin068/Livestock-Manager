@@ -73,7 +73,7 @@ const data= [
     },
 ];
 
-let cartList=[]; //array to store cart lists
+let cartList=[]; 
 
 var i;
 var detail =document.getElementsByClassName('card-item');
@@ -107,17 +107,17 @@ document.addEventListener('click',function (e){
 })
 
 
-//click event to display details page
+
 for(i=0;i<data.length;i++){
     detail[i].addEventListener('click',handleDetail)
 }
 
 var getId;
 
-//click events to add items to cart from home page cart icon
+
 addToCarts.forEach(val=>val.addEventListener('click',()=>addToCart(val.parentNode.id)));
 
-// details function
+
 function handleDetail(e){
     detailsPage.style.display = 'block'
     getId= this.parentNode.id;
@@ -142,18 +142,16 @@ function addToCart(id) {
     data[id].itemInCart= true
 }
 
-//back to main page
+
 function refreshPage(){
     detailsPage.style.display = 'none'
 }
 
-// hide your cart page
 function hideCart(){
     document.getElementById('main').style.display= "block";
     document.getElementById('cart-container').style.display= "none";
 }
 
-//display your cart page
 function displayCart(){
     document.getElementById('main').style.display= "none";
     document.getElementById('details-page').style.display= "none";
@@ -173,7 +171,7 @@ var totalAmount;
 var totalItems;
 var totalSaving;
 
-//add item to the cart
+
 function addItem(){
     totalAmount=0;
     totalItems = 0;
@@ -226,10 +224,10 @@ function addItem(){
         document.getElementById('total').style.display= "block";
 }
 document.getElementById('go-back').addEventListener('click', function() {
-    window.location.href = 'index2.html'; // Replace 'index2.html' with the appropriate URL
+    window.location.href = 'index2.html'; 
 });
 
-//remove item from the cart
+
 function removeFromCart(itemId){
     data[itemId].itemInCart = false
     cartList = cartList.filter((list)=>list.id!=itemId);
@@ -241,14 +239,14 @@ function removeFromCart(itemId){
 }
 var confirmOrderButton = document.getElementById('confirm-order');
 
-// Add a click event listener to the "Confirm Order" button
+
 confirmOrderButton.addEventListener('click', function () {
-    // Check if the cart is not empty
+
     if (cartList.length > 0) {
-        // Redirect to the checkout HTML page
-        window.location.href = 'checkout.html'; // Replace 'checkout.html' with the actual URL of your checkout page
+      
+        window.location.href = 'checkout.html'; 
     } else {
-        // Display a message if the cart is empty
+ 
         alert('Your cart is empty. Add items to your cart before confirming the order.');
     }
 });
@@ -256,7 +254,7 @@ const goBackEmptyButton = document.getElementById('go-back-empty');
 
 
 goBackEmptyButton.addEventListener('click', function () {
-    // Use window.location to navigate to the main page (index2.html in this case)
-    window.location.href = 'index2.html'; // Update the URL to the correct page
+
+    window.location.href = 'index2.html'; 
 });
 
